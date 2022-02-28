@@ -37,7 +37,42 @@ let pokemonRepository = (function () {
   };
 })();
 
-  function pokemonListLoop(pokemon) {
-    console.log(getAll());
-  }
-  pokemonList.forEach(pokemonListLoop);
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    if (pokemon.height < 0.4) {
+      console.log(
+        pokemon.name,
+        pokemon.height + " Look! A tiny pokemon! ",
+        pokemon.type
+      );
+      document.write(
+        "<p>" + pokemon.name + "<br>",
+        pokemon.height + " Look! A tiny pokemon! " + "<br>",
+        pokemon.type + "<br>",
+        "</p>"
+      );
+
+    } else if (pokemon.height > 1) {
+        console.log(
+          pokemon.name,
+          pokemon.height + " Woah! A huge pokemon! ",
+          pokemon.type
+        );
+        document.write(
+          "<p>" +
+          pokemon.name + "<br>",
+          pokemon.height + " Woah! A huge pokemon! " + "<br>",
+          pokemon.type + "<br>",
+          "</p>"
+        );
+
+      } else {
+        console.log(pokemon.name, pokemon.height, pokemon.type);
+        document.write(
+          "<p>" +
+          pokemon.name + "<br>",
+          pokemon.height + "<br>",
+          pokemon.type + "<br>",
+          "</p>"
+        );
+      }
+  });
