@@ -1,4 +1,4 @@
-let pokemonRepository = (function () {
+let pokemonRepository = (function () { //Start of IIFE
   let pokemonList = [{ //Array for Pokemon List
     name: "Bulbasaur",
     height: 0.7,
@@ -37,8 +37,8 @@ let pokemonRepository = (function () {
   };
 })();
 
-  pokemonRepository.getAll().forEach(function(pokemon) {
-    if (pokemon.height < 0.4) {
+  pokemonRepository.getAll().forEach(function(pokemon) { //Function call for pokemonList
+    if (pokemon.height < 0.4) { // Command for smaller pokemons
       console.log(
         pokemon.name,
         pokemon.height + " Look! A tiny pokemon! ",
@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
         "</p>"
       );
 
-    } else if (pokemon.height > 1) {
+    } else if (pokemon.height > 1) { // Command for lager pokemons
         console.log(
           pokemon.name,
           pokemon.height + " Woah! A huge pokemon! ",
@@ -65,7 +65,7 @@ let pokemonRepository = (function () {
           "</p>"
         );
 
-      } else {
+      } else { // Command for majority of pokemons
         console.log(pokemon.name, pokemon.height, pokemon.type);
         document.write(
           "<p>" +
