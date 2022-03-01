@@ -1,12 +1,40 @@
+/* Colors used
+  Primary Color (background color): #ffffff;
+  Text Color: #000000;
+  Secondary Color: #eb0000;
+*/
+
 body {
-  background-color: #ecf0f1;
+  background-color: #ffffff;
   padding: 10px;
   margin: 10px;
 }
 
   h1 {
     text-align: center;
-    color: black;
-    text-shadow: 2px 2px 8px white;
-
+    color: #eb0000;
   }
+
+  .button-class {
+    background-color: #eb0000;
+    border: none;
+    color: #ffffff;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+  }
+
+
+
+  /* Potiental search bar
+    .additional-information {
+      display: none;
+    }
+    .additional-information.is-visible {
+      display: block;
+    }
+  */ 
