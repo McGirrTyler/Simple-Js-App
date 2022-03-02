@@ -39,15 +39,10 @@ let pokemonRepository = (function () { //Start of IIFE
     button.classList.add("button-class");
     listPokemon.appendChild(button);
     pokemonList.appendChild(listPokemon);
+    button.addEventListener("click", function showDetails(listPokemon) { // Click Listen - showDetails call
+        console.log(pokemon.name);
+      });
 
-  }
-
-  function showDetails(pokemon) {
-    console.log(
-      pokemon.name,
-      pokemon.height,
-      pokemon.type
-    );
   }
 
   return { // Returns functions
@@ -81,11 +76,6 @@ let pokemonRepository = (function () { //Start of IIFE
     pokemonRepository.getAll().forEach(function(pokemon) {
       pokemonRepository.addListItem(pokemon);
     });
-
-    let button = document.querySelector("button");
-      button.addEventListener("click", function (event) {
-        console.log(event);
-      });
 
     /* Potiental Code for Search Bar
     document.querySelector('.show-more').addEventListener('click', function () {
