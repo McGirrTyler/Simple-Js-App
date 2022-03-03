@@ -36,7 +36,7 @@ let pokemonRepository = (function () { //Start of IIFE
       });
     }
 
-    function loadList(item) {
+    function loadList(item) { // Function that loads API
       return fetch(apiUrl).then(function (response) {
         return response.json();
       }).then(function (json) {
@@ -47,7 +47,7 @@ let pokemonRepository = (function () { //Start of IIFE
           };
           add(pokemon);
         });
-      }).catch(function (e) {
+      }).catch(function (e) { 
         console.error(e);
       })
     }
