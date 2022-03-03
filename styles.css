@@ -1,30 +1,37 @@
 /* Colors used
-  Primary Color (background color): #ffffff;
+  Primary Color (background color): white;
+  Border Color: #a6a6a6;
   Text Color: #000000;
   Secondary Color: #eb0000;
 */
 
 body {
-  background-color: #ffffff;
+  background-color: #a6a6a6;
   padding: 10px;
   margin: 10px;
 }
 
+.website-body {
+  background-color: white;
+}
+
   h1 {
+    padding: 15px;
     text-align: center;
     color: #eb0000;
   }
 
   .button-class {
-    background-color: #eb0000;
-    border: none;
-    color: #ffffff;
+    background-color: #ffffff;
+    box-shadow: 1px 2px 2px 1px #eb0000;
+    border: 1px solid black;
+    color: black;
     padding: 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px;
+    margin: 10px;
     cursor: pointer;
   }
 
@@ -37,4 +44,4 @@ body {
     .additional-information.is-visible {
       display: block;
     }
-  */ 
+  */
