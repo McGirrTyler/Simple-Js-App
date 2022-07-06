@@ -1,6 +1,6 @@
 let pokemonRepository = (function () { //Start of IIFE
   let pokemonList = []; // Pokemon Array to be fetched
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?offset=20&limit=150';
   function add(pokemon) { // Function that allows for adding of Pokemons
     if (
       typeof pokemon === "object" &&
@@ -19,6 +19,7 @@ let pokemonRepository = (function () { //Start of IIFE
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       console.log(pokemon);
+      showModal(pokemon.name,'Height: ' + pokemon.height);
     }
   )};
 
@@ -111,28 +112,6 @@ let pokemonRepository = (function () { //Start of IIFE
   let modalContainer = document.querySelector('#modal-container');
   modalContainer.classList.remove('is-visible');
 }
-
-  function showDialog(title, text) {
-    showModal(title, text);
-      //defined modalContainer here
-    let modalContainer = document.querySelector('#modal-container');
-      //to add a confirm and cancel button to the modal
-    let modal = modalContainer.querySelector('.modal');
-
-    let confirmButton = document.createElement('button');
-    confirmButton.classList.add('modal-confirm');
-    confirmButton.innerText = 'Confirm';
-
-    let cancelButton = document.createElement('button');
-    cancelButton.classList.add('modal-cancel');
-    cancelButton.innerText = 'Cancel';
-
-    modal.appendChild(confirmButton);
-    modal.appendChild(cancelButton);
-
-    // We want to focus the confirmButton so that the user can simply press Enter
-    confirmButton.focus();
-  }
 
   window.addEventListener('keydown', (e) => {
     let modalContainer = document.querySelector('#modal-container');
