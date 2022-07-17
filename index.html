@@ -16,9 +16,20 @@
   </head>
 
   <body>
+      <nav class="navbar">
+        <a class="navbar-brand">
+          <img src="img/pokemon_ball.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Pokédex
+        </a>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Type a  Pokemon..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
     <!-- Main Content -->
     <div class="website-body">
-      <h1>Pokémon</h1>
       <button id="show-modal">Show modal</button>
       <div id="modal-container"></div>
       <ul class="pokemon-list"></ul>
@@ -45,7 +56,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-
-<!-- Potiental code for Search bar
-    <button> class="show-more">Show more</a>
-    <div class='additional-information'>More information goes in here.</div> -->
