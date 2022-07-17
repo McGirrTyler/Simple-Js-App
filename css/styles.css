@@ -1,0 +1,97 @@
+/* Colors used
+  Primary Color (background color): white;
+  Border Color: #a6a6a6;
+  Text Color: #000000;
+  Secondary Color: #eb0000;
+*/
+
+body {
+  background-color: #a6a6a6;
+  padding: 10px;
+  margin: 10px;
+}
+
+.website-body {
+  background-color: white;
+  border: 3px solid #eb0000;
+  box-shadow: 10px 10px 10px 2px black;
+}
+
+h1 {
+  padding-top: 15px;
+  text-align: center;
+  color: #eb0000;
+}
+
+.button-class {
+  background-color: #ffffff;
+  box-shadow: 1px 2px 2px #eb0000;
+  border: 2px solid black;
+  border-radius: 30px;
+  color: black;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding-left: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* To show modal above other content */
+  z-index: 999;
+  /* Allows scrolling if screen is not high enough */
+  overflow: auto;
+  /* Modal Centering */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+/* Potiental search bar
+    .additional-information {
+      display: none;
+    }
+    .additional-information.is-visible {
+      display: block;
+    }
+  */
