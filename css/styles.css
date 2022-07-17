@@ -6,15 +6,19 @@
 */
 
 body {
-  background-color: #a6a6a6;
+  background-image: url(https://ak.picdn.net/shutterstock/videos/1012154675/thumb/4.jpg);
   padding: 10px;
   margin: 10px;
 }
 
 .website-body {
-  background-color: white;
-  border: 3px solid #eb0000;
-  box-shadow: 10px 10px 10px 2px black;
+  box-shadow: 10px  #000;
+  background-color: rgba(199, 25, 25, 0.826);
+}
+
+.navbar{
+    box-shadow: 5px 5px 5px  rgb(124, 122, 122);
+  background-color: rgba(199, 25, 25, 0.831)
 }
 
 h1 {
