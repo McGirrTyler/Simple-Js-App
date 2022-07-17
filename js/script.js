@@ -12,11 +12,12 @@ let pokemonRepository = (function () {
   }
 
   function getAll() {
-    // Function that calls repository
-    return pokemonList;
+    // Call repository
+    return pokemonList; 
   }
 
   function showDetails(pokemon) {
+    //Details of indiviual Pokemons
     loadDetails(pokemon).then(function () {
       console.log(pokemon);
       showModal(pokemon);
@@ -24,7 +25,7 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    // Function used to call and dispaly pokemons
+    // Call and dispaly Pokemons
     let pokemonList = document.querySelector(".pokemon-list");
     let listPokemon = document.createElement("li");
     let button = document.createElement("button");
@@ -39,7 +40,7 @@ let pokemonRepository = (function () {
   }
 
   function loadList(item) {
-    // Function that loads API
+    // Loads API
     return fetch(apiUrl)
       .then(function (response) {
         return response.json();
@@ -118,7 +119,7 @@ let pokemonRepository = (function () {
     let modalContainer = document.querySelector("#modal-container");
     modalContainer.classList.remove("is-visible");
   }
-})();
+})(); // End of IIFE
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
