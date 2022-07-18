@@ -9,6 +9,7 @@ let pokemonRepository = (function () {
     } else {
       console.log("pokemon is not correct");
     }
+    showModal(pokemon);
   }
 
   function getAll() {
@@ -36,6 +37,7 @@ let pokemonRepository = (function () {
     button.addEventListener("click", function (event) {
       // Click Listen - showDetails call
       showDetails(pokemon);
+      showModal(pokemon); 
     });
   }
 
@@ -88,10 +90,10 @@ let pokemonRepository = (function () {
     //Creating Pokemon name header
     let nameElement = $("<h1>" + pokemon.name + "</h1>");
     //Creating modal front img of pokemon
-    let imageElementFront = $('img class="modal-img"style="width:50%">');
+    let imageElementFront = $('<img class="modal-img"style="width:50%">');
     imageElementFront.attr("src", pokemon.imageUrlFront);
     // Creating modal back image of pokemon
-    let imageElementBack = $('img class="modal-img"style="width:50%"');
+    let imageElementBack = $('<img class="modal-img"style="width:50%">');
     imageElementBack.attr("src", pokemon.imageUrlBack);
     //Creating Pokemon Height
     let heightElement = $("<p>" + "height : " + pokemon.height + "</p>");
@@ -127,4 +129,9 @@ pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
+});
+
+$('[data-toggle="modal"]').on('click', function(){
+  let targetSelector = $(this).attr('data-target');
+  $(targetSelector).modal('show'); // Bootstrap’s own function to make the modal appear
 });
