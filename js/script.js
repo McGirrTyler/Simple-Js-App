@@ -27,8 +27,10 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
      // Call and dispaly Pokemons
-     let pokemonList = document.querySelector(".pokemon-list");
+     let pokemonList = document.querySelector(".list-group-horizontal");
      let listPokemon = document.createElement("li");
+     pokemonList.classList.add(".list-group-horizontal"); //flexbox grid-system
+     pokemonList.classList.add("col-sm-7"); //flexbox grid-system
      let button = document.createElement("button");
      button.innerText = pokemon.name;
      button.classList.add("button-class");
@@ -67,7 +69,7 @@ let pokemonRepository = (function () {
            return response.json();
         })
         .then(function (details) {
-           // Now we add the details to the item
+           // Add the details to the item
            item.imageUrlfront = details.sprites.front_default;
            item.imageUrlback = details.sprites.back_default;
            item.height = details.height;
@@ -131,9 +133,4 @@ pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
      pokemonRepository.addListItem(pokemon);
   });
-});
-
-$('[data-toggle="modal"]').on('click', function () {
-  let targetSelector = $(this).attr('data-target');
-  $(targetSelector).modal('show'); // Bootstrap’s own function to make the modal appear
 });

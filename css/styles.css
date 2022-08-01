@@ -5,26 +5,42 @@
   Secondary Color: #eb0000;
 */
 
-body {
+body { /* Basic website template */
   background-image: url(https://ak.picdn.net/shutterstock/videos/1012154675/thumb/4.jpg);
   padding: 10px;
   margin: 10px;
 }
 
-.website-body {
+.navbar{ /* Navigation Bar styling */
+  box-shadow: 5px 5px 5px  rgb(124, 122, 122);
+  background-color: rgb(173, 52, 52);
+}
+
+.main-content { /* Styling for Pokedex */
   box-shadow: 10px  #000;
-  background-color: rgba(199, 25, 25, 0.826);
+  background-color: rgba(243, 225, 60, 0.806);
   padding: 10px;
-  text-align: center;
 }
 
-.navbar{
-    box-shadow: 5px 5px 5px  rgb(124, 122, 122);
-  background-color: rgba(199, 25, 25, 0.831)
+ul {
+  list-style: none;
 }
 
-h1 {
-  padding-top: 15px;
+.button-class { /* Styling for pokemon button */
+  background-color: #6ebee0;
+  border: solid;
+  color: rgb(0, 0, 0);
+  padding: 16px;
   text-align: center;
-  color: #eb0000;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  text-transform: capitalize;
+}
+
+.modal-content { /* Styling for pokemon modal*/
+  background-color: rgb(194, 189, 189);
+  text-transform: capitalize;
+  text-align: center;
+  justify-content: center;
 }
